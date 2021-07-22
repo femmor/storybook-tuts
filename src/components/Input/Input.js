@@ -1,9 +1,9 @@
 import React from 'react'
 import './Input.css'
 
-const Input = ({ variant='medium', children, ...rest}) => {
+const Input = ({ size='medium', variant, children, ...rest}) => {
   return (
-    <input className={`input ${variant}`} placeholder={children} {...rest} />
+    <input className={`input ${size} ${variant}`} placeholder={children} {...rest} />
   )
 }
 

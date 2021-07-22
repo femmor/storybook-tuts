@@ -14,7 +14,7 @@
 .invalid:focus {
   background-color: rgb(255, 211, 211);
   color: black;
-  border-bottom: 2px solid green
+  border-bottom: 2px solid red
 }
 
 .small {
