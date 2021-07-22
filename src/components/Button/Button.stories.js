@@ -6,11 +6,41 @@ export default {
   component: Button,
 }
 
-export const Primary = () => <Button variant="primary">Primary</Button>
-export const Secondary = () => <Button variant="secondary">Secondary</Button>
-export const Success = () => <Button variant="success">Success</Button>
-export const Danger = () => <Button variant="danger">Danger</Button>
-export const Stretch = () => <Button variant='primary stretch' >Stretched Button</Button>
-export const Disabled = () => <Button variant="disabled" disabled>Disabled</Button>
+// using Args mechanism
+const Template = (args) => <Button {...args}/>
 
-Disabled.storyName = "Disabled button"
+export const Primary = Template.bind({})
+Primary.args = {
+  variant: 'primary',
+  children: 'Primary Button'
+}
+
+export const Secondary = Template.bind({})
+Secondary.args = {
+  variant: 'secondary',
+  children: 'Secondary Button'
+}
+
+export const Success = Template.bind({})
+Success.args = {
+  variant: 'success',
+  children: 'Success Button'
+}
+
+export const Danger = Template.bind({})
+Danger.args = {
+  variant: 'danger',
+  children: 'Danger Button'
+}
+
+export const Stretch = Template.bind({})
+Stretch.args = {
+  variant: 'primary stretch',
+  children: 'Stretch Button'
+}
+
+export const DisabledButton = Template.bind({})
+DisabledButton.args = {
+  variant: 'disabled',
+  children: 'Disabled Button'
+}
